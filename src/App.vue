@@ -61,6 +61,7 @@ section {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  overflow-x: hidden;
 }
 
 .menu{
