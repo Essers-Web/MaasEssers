@@ -111,6 +111,7 @@ p{
   display: flex;
   justify-content: center;
   background-color: transparent;
+  margin-top: 4vw;
 }
 
 .box{

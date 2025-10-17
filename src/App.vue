@@ -2,24 +2,24 @@
   <header class="menu">
     <menuBlock @scrollTo="scrollToSection"></menuBlock>
   </header>
+  <div id="intro"></div>
   <section ref="sections">
-    <div id="intro"></div>
     <intro></intro>
   </section>
+  <div id="about"></div>
   <section ref="sections">
-    <div id="about"></div>
     <about></about>
   </section>
+  <div id="skills"></div>
   <section ref="sections">
-    <div id="skills"></div>
     <skills></skills>
   </section>
+  <div id="projects"></div>
   <section ref="sections">
-    <div id="projects"></div>
     <projects></projects>
   </section>
+  <div id="contact"></div>
   <section ref="sections">
-    <div id="contact"></div>
     <contact></contact>
   </section>
 </template>
@@ -37,21 +37,21 @@ const sections = ref([])
 const ids = ["intro","about", "skills", "projects", "contact"]
 
 const scrollToSection = (i) => {
+  const element = document.getElementById(ids[i]);
   const isPortrait = window.matchMedia("(max-width: 700px), (orientation: portrait)").matches;
 
-  if(isPortrait){
-    document.getElementById(ids[i]).scrollIntoView({
-      behavior: "smooth",
-      block: "end"
-    });
+  let yOffset;
+
+  if (isPortrait) {
+    yOffset = window.innerWidth * 0.75;
+  } else {
+    yOffset = window.innerWidth * 0.10;
   }
-  else {
-    document.getElementById(ids[i]).scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
-  }
+
+  const y = element.getBoundingClientRect().top + window.window.scrollY - yOffset;
+  window.scrollTo({ top: y, behavior: "smooth" });
 };
+
 </script>
 
 <style scoped>
@@ -62,7 +62,9 @@ section {
   justify-content: center;
   background-color: transparent;
   overflow-x: hidden;
+  overflow-y: visible;
 }
+
 
 .menu{
   position: sticky;
