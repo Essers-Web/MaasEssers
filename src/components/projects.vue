@@ -5,7 +5,7 @@
       <div class="line"></div>
       <div class="project-box">
         <div class="image-container">
-            <img loading="lazy" alt="Project image" class="image" :src="project.picture" :alt="project.title"/>
+            <img alt="Project image" class="image" :src="project.picture" :alt="project.title"/>
         </div>
         <div class="text">
           <h1 class="title">{{project.title}} </h1>
@@ -26,6 +26,7 @@
 import {ref} from "vue";
 import CalendarNoteImg from "../assets/CalendarNote.png"
 import ComponentsWebsiteImg from "../assets/ComponentsWebsite.png"
+
 
 const projects = ref([
   {
