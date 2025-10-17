@@ -5,7 +5,7 @@
       <div class="line"></div>
       <div class="project-box">
         <div class="image-container">
-            <img class="image" :src="project.picture" :alt="project.title"/>
+            <img loading="lazy" alt="Project image" class="image" :src="project.picture" :alt="project.title"/>
         </div>
         <div class="text">
           <h1 class="title">{{project.title}} </h1>
@@ -136,6 +136,7 @@ a {
   box-shadow: 0 0 2vw rgb(255, 128, 0);
   transition: 0.4s;
   font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Verdana", sans-serif;
+  color:#dfdfdf;
 }
 
 .button:hover{
