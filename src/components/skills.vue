@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <h1 ref="title">skills</h1>
+    <h1 ref="title">Skills</h1>
     <div class="skill-box">
       <div class="line"></div>
       <h2>Frontend Development:</h2>
@@ -31,8 +31,8 @@
 <script setup>
 import {onMounted, onUnmounted, ref} from "vue";
 
-const FrontEnd =["HTML", "CSS", "Javascript", "Vue.js", "Vite", "API's (small)"];
-const DevTools =["GitHub", "WebStorm", "Figma"]
+const FrontEnd =["HTML", "CSS", "Javascript", "Vue.js", "Vite", "API's"];
+const DevTools =["GitHub", "WebStorm", "Figma", "PhpStorm", "Docker"]
 const Languages =["Dutch", "English", "Cambridge: B2"];
 const title = ref(null)
 const FrontEndBox = ref(null);

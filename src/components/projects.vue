@@ -9,7 +9,7 @@
         </div>
         <div class="text">
           <h1 class="title">{{project.title}} </h1>
-          <button class="button" @click="openLink(project.link)">
+          <button v-show="project.link" class="button" @click="openLink(project.link)">
             View on GitHub
           </button>
           <p class="description">{{project.description}}</p>
@@ -26,6 +26,7 @@
 import {ref} from "vue";
 import CalendarNoteImg from "../assets/CalendarNote.png"
 import ComponentsWebsiteImg from "../assets/ComponentsWebsite.png"
+import CycleSoftwareImg from "../assets/CycleSoftware.jpg"
 
 
 const projects = ref([
@@ -42,6 +43,13 @@ const projects = ref([
     description: "This project features a collection of custom Vue.js components developed to create a smooth and modern web experience. It includes elements such as a loader, image scroller, sliding menu, and login page. Each component is designed with responsiveness, clean styling, and subtle animations to enhance usability and visual appeal. The goal was to build reusable, well-structured UI elements that can be easily integrated into different web projects.",
     picture: ComponentsWebsiteImg,
     link:"https://github.com/Essers-Web/portfolioMaasEssers/tree/main/vue-website-components"
+  },
+  {
+    id: 3,
+    title: "CycleSoftware",
+    description: "I worked as a Frontend Web Developer at CycleSoftware, where I contributed directly to the development of their core software platform. I was involved in building and improving features within the application, focusing on performance, usability, and maintainability. This experience gave me hands-on insight into developing production-level software and strengthened my skills in writing clean, scalable frontend code within a professional development environment.",
+    picture: CycleSoftwareImg,
+    link:""
   },
 
 ])
